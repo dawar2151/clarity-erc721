@@ -1,0 +1,7 @@
+[network]
+name = "erc721"
+node_rpc_address = "https://stacks-node-api.testnet.stacks.co"
+deployment_fee_rate = 10
+
+[accounts.deployer]
+mnemonic = "jungle predict drip avocado jaguar recycle cook mad cruel stay merit afraid taxi father access bean couple say demand maze afford grunt aunt deposit"
