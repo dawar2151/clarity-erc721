@@ -29,9 +29,13 @@ export function getUserData() {
 export function getPerson() {
   return new Person(getUserData().profile);
 }
-
+export function getTestNetAddress(){
+  const userData = getUserData();
+  return userData.profile.stxAddress.testnet;
+}
 export function displayName() {
   const userData = getUserData();
+  console.log(userData);
   // marvin.btc or stacks address
   return userData.username || userData.identityAddress;
 }

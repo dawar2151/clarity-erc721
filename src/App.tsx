@@ -30,9 +30,10 @@ export default class App extends Component {
             Signed in as {displayName()} <SignOutButton />
           </div>
         )}
-
+        {/*
         <h2>Top counter(Counter contract)</h2>
         <TopCounter />
+        */}
 
         <h2>Mint(NFT Token)</h2>
         {!userSession.isUserSignedIn() ? (

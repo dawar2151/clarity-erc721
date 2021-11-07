@@ -7,23 +7,28 @@ import {
   standardPrincipalCV
 } from "@stacks/transactions";
 
-async function mintToken() {
+import { displayName, userSession, getTestNetAddress } from "../auth";
+const PlayButton = (props: any) => {
+  const [tokenId, setTokenId] = useState('2');
+  async function mintToken() {
+    const address = getTestNetAddress();
+    console.log(address);
     return openContractCall({
       onCancel: () => alert("Cancelled!"),
       onFinish: (tx: FinishedTxData) => console.log("tx sent", tx),
       contractAddress: Config.erc721ContractAddress,
       contractName: Config.erc721ContractName,
       functionName: "mintToken",
-      functionArgs: [ standardPrincipalCV('SP2JXKMSH007NPYAQHKJPQMAQYAD90NQGTVJVQ02B'), uintCV('3')],
+      functionArgs: [ standardPrincipalCV(address), uintCV(tokenId)],
       //network: Network
     });
   }
-
-const PlayButton = (props: any) => {
-  const [tokenId, setTokenId] = useState('2');
-  
   return (
     <>
+    <input 
+      type="text"
+      value={tokenId}
+      onChange={(e) => setTokenId(e.target.value)} />
     <Button isLoading={false} onClick={mintToken} {...props}>
       Mint token
     </Button>
