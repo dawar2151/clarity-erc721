@@ -4,7 +4,6 @@ import { displayName, userSession } from "./auth";
 import ConnectWalletButton from "./components/connect-wallet-button";
 import MintToken from "./components/mint-erc721-token";
 import SignOutButton from "./components/sign-out-button";
-import TopCounter from "./components/top-counter";
 
 export default class App extends Component {
   componentDidMount() {
