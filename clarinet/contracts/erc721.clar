@@ -72,7 +72,6 @@
               (+ u1 current-balance))
             (ok success))
         error (nft-mint-err error))))
-
 ;; Internal - Tranfer token
 (define-private (transfer-token (token-id uint) (owner principal) (new-owner principal))
   (let
