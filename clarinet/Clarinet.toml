@@ -5,3 +5,7 @@ requirements = []
 [contracts.erc721]
 path = "contracts/erc721.clar"
 depends_on = []
+
+[contracts.exchangeSingle]
+path = "contracts/exchangeSingle.clar"
+depends_on = []

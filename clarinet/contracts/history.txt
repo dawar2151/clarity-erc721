@@ -1,0 +1,6 @@
+#V2
+ (contract-call? .hello-world say-hi)
+ (contract-call? .exchangeSingle mint(SP161HS4GNW4EV1ZXZREVHB4WTEMTRGVSHKRJ8R90, 1))
+ (contract-call? .exchangeSingle mint SP161HS4GNW4EV1ZXZREVHB4WTEMTRGVSHKRJ8R90 1)
+ (contract-call? .exchangeSingle mint 'SP161HS4GNW4EV1ZXZREVHB4WTEMTRGVSHKRJ8R90 1)
+ (contract-call? .exchangeSingle mint 'SP161HS4GNW4EV1ZXZREVHB4WTEMTRGVSHKRJ8R90 u1)
